@@ -1,0 +1,2 @@
+const n=document.querySelector(".user-list");fetch("https://jsonplaceholder.typicode.com/users").then((n=>{if(!n.ok)throw new Error(n.status);return n.json()})).then((e=>function(e){const o=e.map((n=>`<li>\n          <p><b>Name</b>: ${n.name}</p>\n          <p><b>Email</b>: ${n.email}</p>\n          <p><b>Company</b>: ${n.company.name}</p>\n        </li>`)).join("");n.innerHTML=o}(e))).catch((n=>console.log(n)));
+//# sourceMappingURL=index.cb1573b2.js.map
