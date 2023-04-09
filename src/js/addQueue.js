@@ -17,7 +17,7 @@ import { removeFromLibraryList, addToLibrary } from './helpers/library-main';
 const { headerQueueBtn } = refs;
 
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import "notiflix/dist/notiflix-3.2.5.min.css";
+
 
 // Додає або видаляє фільм з localStorage в залежності від стану кнопки
 
