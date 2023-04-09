@@ -1,23 +1,29 @@
-import { fetchApi } from './js/fetch';
-const userList = document.querySelector('.user-list');
+import './js/features/about-us/modalAbout';
+import './js/features/upToTop/upToTop';
+import './js/features/theme-switcher/theme-switcher';
+import './js/features/trend-slider/slider-trends';
+import './js/features/auth/authModalWindowContent';
+import './js/helpers/helpers';
+import { renderMovieList } from './js/renderMovieList';
 
-fetchApi()
-    .then((users) => renderUserList(users))
-    .catch((error) => console.log(error));
+import { refs } from './js/constants/refs';
 
-function renderUserList(users) {
-  const markup = users
-    .map((user) => {
-      return `<li>
-          <p><b>Name</b>: ${user.name}</p>
-          <p><b>Email</b>: ${user.email}</p>
-          <p><b>Company</b>: ${user.company.name}</p>
-        </li>`;
-    })
-    .join("");
-    userList.innerHTML = markup;
-    
-}
+import { renderTrendingMoviesSetup } from './js/renderMovieList';
+import { onSearchFormSubmit } from './js/onSearchFormSubmit';
+import { onPaginationBtnClick } from './js/pagination/onPaginationBtnClick';
 
-let dbb = [1, 2, 4, 5, 66, 6, 44];
-console.log(Array.isArray(dbb));
+import { authObserver } from './js/api/firebase/api';
+import {
+  showAuthorisedFields,
+  showUnauthorisedFields,
+} from './js/features/auth/authModalWindowContent';
+import { search } from './js/api/moviedb/searchMovies';
+
+authObserver([showAuthorisedFields], [showUnauthorisedFields]);
+
+renderTrendingMoviesSetup();
+refs.paginationBox.addEventListener('click', e => {
+  search.pagination = true;
+  onPaginationBtnClick(e.target, renderMovieList);
+});
+refs.headerForm.addEventListener('submit', onSearchFormSubmit);
