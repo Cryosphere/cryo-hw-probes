@@ -1,2 +1,0 @@
-!function(){var n=document.querySelector(".user-list");fetch("https://jsonplaceholder.typicode.com/users").then((function(n){if(!n.ok)throw new Error(n.status);return n.json()})).then((function(t){return function(t){var o=t.map((function(n){return"<li>\n          <p><b>Name</b>: ".concat(n.name,"</p>\n          <p><b>Email</b>: ").concat(n.email,"</p>\n          <p><b>Company</b>: ").concat(n.company.name,"</p>\n        </li>")})).join("");n.innerHTML=o}(t)})).catch((function(n){return console.log(n)}))}();
-//# sourceMappingURL=index.39be3692.js.map
