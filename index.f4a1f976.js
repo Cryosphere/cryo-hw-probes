@@ -1,2 +1,0 @@
-const n=document.querySelector(".user-list");fetch("https://jsonplaceholder.typicode.com/users").then((n=>{if(!n.ok)throw new Error(n.status);return n.json()})).then((o=>function(o){const e=o.map((n=>`<li>\n          <p><b>Name</b>: ${n.name}</p>\n          <p><b>Email</b>: ${n.email}</p>\n          <p><b>Company</b>: ${n.company.name}</p>\n        </li>`)).join("");n.innerHTML=e}(o))).catch((n=>console.log(n)));console.log(Array.isArray([1,2,4,5,66,6,44]));
-//# sourceMappingURL=index.f4a1f976.js.map
