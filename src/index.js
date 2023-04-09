@@ -19,3 +19,5 @@ function renderUserList(users) {
     
 }
 
+let dbb = [1, 2, 4, 5, 66, 6, 44];
+console.log(Array.isArray(dbb));
