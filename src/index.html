@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GoIT Filmoteka 2022</title>
-  <link rel="icon" href="./images/film.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./sass/index.scss" />
-  <!-- Change theme -->
-  <link rel="stylesheet" title="theme" href="./sass/dark-theme.scss" disabled />
-
-  <script type="module" src="./index.js"></script>
-</head>
-
-<body>
-  <include src="./partials/home-header.html"></include>
-  <main>
-    <div class="container">
-      <include src="./partials/theme-switcher.html"></include>
-
-      <include src="./partials/slider-trends.html"></include>
-      <section class="films-section">
-        <h2 class="visually-hidden">Films</h2>
-        <ul class="film-list js-main-film-list"></ul>
-        <div class="pagination_box"></div>
-      </section>
-    </div>
-  </main>
-  <include src="./partials/footer.html"></include>
-  <include src="./partials/about-modal.html"></include>
-  <div class="backdrop__modal-card" data-backdrop></div>
-  <div class="backdrop backdrop__is-hidden js-page-loader">
-    <div class="loader is-active" id="js-page-loader">🍿</div>
-  </div>
-  <div class="container relative-container">
-    <include src="./partials/up-btn.html"></include>
-  </div>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filmoteka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+  </head>
+  <body>
+    <button class=""
+    <include src="./partials/header.html"></include>
+    <include src="./partials/main.html"></include>
+    <include src="./partials/footer.html"></include>
+    <include src="./partials/modal-team.html"></include>
+    <include src="./partials/modal-film.html"></include>
+    <include src="./partials/backToTop.html"></include>
+    <include src="./partials/canvas.html"></include>
+    <include src="./partials/user.html"></include>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>

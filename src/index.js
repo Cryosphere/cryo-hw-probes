@@ -1,29 +1,18 @@
-import './js/features/about-us/modalAbout';
-import './js/features/upToTop/upToTop';
-import './js/features/theme-switcher/theme-switcher';
-import './js/features/trend-slider/slider-trends';
-import './js/features/auth/authModalWindowContent';
-import './js/helpers/helpers';
-import { renderMovieList } from './js/renderMovieList';
+import './sass/main.scss';
 
-import { refs } from './js/constants/refs';
-
-import { renderTrendingMoviesSetup } from './js/renderMovieList';
-import { onSearchFormSubmit } from './js/onSearchFormSubmit';
-import { onPaginationBtnClick } from './js/pagination/onPaginationBtnClick';
-
-import { authObserver } from './js/api/firebase/api';
-import {
-  showAuthorisedFields,
-  showUnauthorisedFields,
-} from './js/features/auth/authModalWindowContent';
-import { search } from './js/api/moviedb/searchMovies';
-
-authObserver([showAuthorisedFields], [showUnauthorisedFields]);
-
-renderTrendingMoviesSetup();
-refs.paginationBox.addEventListener('click', e => {
-  search.pagination = true;
-  onPaginationBtnClick(e.target, renderMovieList);
-});
-refs.headerForm.addEventListener('submit', onSearchFormSubmit);
+import './js/refs';
+import './js/teamModal';
+import './js/switchDayNight';
+import './js/apiSevice';
+import './js/backToTop';
+import './js/filmModal';
+import './js/galleryFetch';
+import './js/headerBtn';
+import './js/pagination';
+import './js/search';
+import './js/localization.js';
+import './js/searchByGenre.js';
+import './js/canvas.js';
+import './js/library.js';
+import './js/userService/user-service';
+import './js/choices';

@@ -1,0 +1,107 @@
+.theme__switch-wrapper {
+    display: flex;
+    align-items: center;
+    // z-index: 100;
+    position: absolute;
+    right: 85px;
+    top: 175px;
+    @media screen and (max-width:768px){
+      right: 55px;
+    }
+  }
+  
+  .theme__switch-wrapper span {
+    margin-right: 10px;
+    font-size: 1rem;
+    @media screen and (max-width:768px){
+      margin-right: 0;
+    }
+  }
+  
+  .theme__switch {
+    display: inline-block;
+    height: 28px;
+    position: relative;
+    width: 54px;
+  }
+  
+  .theme__switch input {
+    display: none;
+  }
+  
+  .slider {
+    background: var(--second-text-color);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+
+  }
+  
+  .slider::before {
+    background: var(--white-text-color);
+    bottom: 4px;
+    content: "";
+    height: 20px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 20px;
+  }
+
+  
+  input:checked + .slider {
+    background:  var(--accent-color);
+  }
+  
+  input:checked + .slider::before {
+    @media screen and (min-width:769px){
+      transform: translateX(16px);
+    }
+
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+    @media screen and (max-width:768px){
+      width: 28px;
+    }
+  }
+  
+  .slider.round::before {
+    border-radius: 50%;
+  }
+  .fas{
+      color:var(--white-text-color);
+  }
+  .fa-sun, .fa-moon {
+    font-size: 30px;
+    margin-right: 5px;
+    @media screen and (max-width:768px){
+      font-size: 25px;
+    }
+  }
+  .icon__dark{
+    color: var(--accent-color);
+  }
+  body.dark__theme .icon__dark{
+    margin-right:15px;
+    margin-left:0;
+    animation:none;
+  }
+
+body.dark__theme{
+  background-color: var(--second-dark-bg-color);
+}
+
+body.dark__theme header,
+body.dark__theme footer
+{
+  box-shadow: 0px 1px 58px 12px rgba(255,85,0,0.7),
+            1px 2px 4px 0px rgba(255,85,0,0.7),
+            2px 4px 8px 0px rgba(255,85,0,0.7),
+            2px 4px 16px 0px rgba(255,85,0,0.7);
+}

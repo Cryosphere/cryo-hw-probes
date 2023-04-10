@@ -1,0 +1,18 @@
+.gallery {
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.gallery.wrong {
+  background-image: url(../images/emotion-skype-3.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: auto auto;
+  padding-top: 230px;
+  padding-bottom: 230px;
+}

@@ -1,0 +1,106 @@
+<header class="header home">
+  <div class="header-container container" id="tabs-1">
+    <div class="banner">#StandWithUKRAINE</div>
+    <div class="header__tabs">
+      <div class="header__title-panel">
+        <a href="" class="header__logo"
+          ><svg class="icon-animation" width="30px" height="30px">
+            <use href="./images/svg/symbol-defs.svg#icon-film"></use></svg
+          ><span class="logo-title">Filmoteka</span></a
+        >
+        <!-- <span class="fa-solid fa-film fa-xl icon-animation "></span> -->
+      </div>
+      <nav class="header__nav">
+        <ul class="header__controls" data-controls>
+          <li><a href="#home" class="header__controls-item btn1">Home</a></li>
+          <li>
+            <a href="#mylibrary" class="header__controls-item btn2 hidden-tab"
+              >My Library</a
+            >
+          </li>
+        </ul>
+        <div>
+          <a id="auth" href="#registration" class="header__registration-item">
+            <svg class="header__registration-icon">
+              <use href="./images/svg/symbol-defs.svg#icon-tux"></use>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <div class="header__panes" data-panes>
+      <form class="pane header__pane-search-form" id="home">
+        <label class="header__search-form-lab">
+          <input
+            type="text"
+            name="searchQuery"
+            placeholder="Movie search"
+            class="header__search-form-input"
+          />
+        </label>
+        <button type="submit" class="header__input-search-buttons">
+          <i class="fa-solid fa-magnifying-glass icon-animation-2"></i>
+        </button>
+      </form>
+
+      <div class="pane" id="mylibrary">
+        <ul class="header__library-buttons">
+          <li class="header__library-buttons-item">
+            <button
+              type="button"
+              class="header__library-buttons-button watched"
+            >
+              watched
+            </button>
+          </li>
+          <li class="header__library-buttons-item">
+            <button type="button" class="header__library-buttons-button queue">
+              queue
+            </button>
+          </li>
+        </ul>
+      </div>
+      <!-- <p class="search-form__error">Oops, films not found!</p> -->
+    </div>
+    <div class="theme__switch-wrapper">
+      <span id="toggle-icon">
+        <!-- <span class="toggle-text">Light Mode</span> -->
+        <i class="fas fa-sun"></i>
+      </span>
+      <label class="theme__switch">
+        <input type="checkbox" class="day-night-switch" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="header__container-select">
+      <select class="header__select">
+        <option value="en">EN</option>
+        <option value="uk">UA</option>
+      </select>
+    </div>
+    <div class="header__genre">
+      <select class="genre">
+        <option>Choose genre</option>
+        <option value="Action">Action</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Animation">Animation</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Crime">Crime</option>
+        <option value="Documentary">Documentary</option>
+        <option value="Drama">Drama</option>
+        <option value="Family">Family</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="History">History</option>
+        <option value="Horror">Horror</option>
+        <option value="Music">Music</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Romance">Romance</option>
+        <option value="Science Fiction">Science Fiction</option>
+        <option value="TV Movie">TV Movie</option>
+        <option value="Thriller">Thriller</option>
+        <option value="War">War</option>
+        <option value="Western">Western</option>
+      </select>
+    </div>
+  </div>
+</header>
